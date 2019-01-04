@@ -1,0 +1,8 @@
+<?php
+$task=array("sabeetha"=>"php","sangeetha"=>"javascript","sathya"=>"html","papa"=>"css");
+print_r($task);
+foreach($task as $key=>$value)
+{
+    echo $key.":".$value. "</ br>";
+}
+?>
