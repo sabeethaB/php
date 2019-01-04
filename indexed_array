@@ -1,0 +1,5 @@
+<?php
+$task=array("planning","designing","coding","testing","deployment");
+print_r($task);
+echo $task[0];
+?>
