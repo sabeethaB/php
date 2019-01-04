@@ -1,0 +1,38 @@
+<?php
+class Mainfunction
+{
+  var $firstname;
+  var $lastname;
+  function getfullname()
+  {
+      return $this->firstname." ".$this->lastname;
+  }
+}
+class Subfunction extends Mainfunction
+{
+  var $firstname;
+  var $lastname;
+  var $city;
+  var $state;
+ function getfullname()
+  {
+      return $this->firstname." ".$this->lastname;
+  }
+  function getaddress()
+  {
+      return $this->city." ".$this->state;
+  }
+  
+}
+$m =new Mainfunction();
+$m->firstname="Sabeetha";
+$m->lastname="Balakrishnan";
+$s =new Subfunction();
+$s->firstname="Selvi";
+$s->lastname="Balakrishnan";
+$s->city="Karur";
+$s->state="Tamil Nadu";
+echo $m->getfullname();
+echo $s->getfullname();
+echo $s->getaddress();
+?>
