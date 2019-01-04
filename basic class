@@ -1,0 +1,15 @@
+<?php
+class Mainfunction
+{
+  var $firstname;
+  var $lastname;
+  function getfullname()
+  {
+      return $this->firstname." ".$this->lastname;
+  }
+}
+$m =new Mainfunction();
+$m->firstname="Sabeetha";
+$m->lastname="Balakrishnan";
+echo $m->getfullname();
+?>
