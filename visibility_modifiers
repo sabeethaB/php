@@ -1,0 +1,52 @@
+<?php
+class mainclass
+{
+   public $firstname;
+   public $lastname;
+   private $familyname="Good";
+   protected $brothername="Sabtha Kiri";
+   /*within the public function we can access all the private and protected variables or properties using function call */
+   public function fullname()
+   {
+       return $this->firstname."".$this->lastname."".$this->familyname."".$this->brothername;
+       echo $this-> getprivatedetails()."<br/>";
+       echo $this->getprotecteddetails()."<br/>";
+   }
+   public function getprivatedetails()
+   {
+    //   echo $this->firstname; 
+     // $familyname="GoodWork";
+      return $this->familyname; 
+   }
+   protected function getprotecteddetails()
+   {
+       return $this->brothername;
+   }
+}
+
+class subclass extends mainclass
+{
+    var $city;
+    var $state;
+      public function fullnamefunction()
+   {
+       return $this->city;
+   }
+    public function fullnamefunctionstate()
+   {
+       return $this->state;
+   }
+}
+$mc= new mainclass();
+$mc->firstname="sabeetha";
+$mc->lastname="Balakrishnan";
+echo $mc->fullname();
+// $mc->familyname="Good";/*private and protected properties not accessed from outside */
+// $mc->brothername="Sabtha Kiri";
+// echo $mc->getprivatedetails();
+$sc= new subclass();
+$sc->city="Karur";
+$sc->state="TamilNadu";
+echo $sc->fullnamefunction();
+echo $sc->fullnamefunctionstate();
+?>
