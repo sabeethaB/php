@@ -1,0 +1,30 @@
+<?php
+class mainclass
+{
+   public $firstname="sabtha";
+   public $lastname="Kiri";
+   public $familyname;
+   public $brothername;
+   /*operator overloading is funtion with different argument passing */
+   public function fullname($first,$last)
+   {
+     echo $mc->firstname=$first."<br />";
+     echo $mc->lastname=$last."<br />"; 
+   }
+   public function fullname1($first)
+   {
+     echo $mc->firstname=$first."<br />";
+     $mc->lastname=$first;
+     echo $mc->lastname."<br />"; 
+   }
+    public function fullname2()
+   {
+     echo  $this->firstname."<br />";
+     echo $this->lastname."<br />"; 
+   }
+}
+$mc=new mainclass();
+$mc->fullname("Sabeetha","Balakrishnan");
+$mc->fullname1("Sabeetha");
+$mc->fullname2();
+?>
