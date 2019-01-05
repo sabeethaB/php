@@ -1,0 +1,37 @@
+<?php
+class members
+{
+    public static $student=["sabeetha","sangeetha","sathya","selvi","kiruthika"];
+    private static $totalcount=0;
+    public static function mainfunction()
+    {
+        return "Hello World!!!!";
+    }
+    public static function addcount()
+    {
+       return self:: $totalcount;
+    }
+    public static function addcountincrement()
+    {
+       self:: $totalcount++;
+    }
+}
+class students extends members
+{
+}
+echo members::$student[0]."<br />";
+echo members::mainfunction()."<br />";
+echo members::addcount()."<br />";
+members::addcountincrement();
+echo members::addcount()."<br />";
+members::addcountincrement();
+echo members::addcount()."<br />";
+echo "</br>";
+echo students::$student[0]."</br>";
+echo students::mainfunction()."<br />";
+echo students::addcount()."<br />";
+students::addcountincrement();
+echo students::addcount()."<br />";
+students::addcountincrement();
+echo students::addcount()."<br />";
+?>
