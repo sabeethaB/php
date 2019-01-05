@@ -1,0 +1,14 @@
+<?php
+class clock
+{
+    public const DAY_IN_SECONDS=60*60*24;
+    public function tomorrow()
+    {
+        return time() + self::DAY_IN_SECONDS;
+    }
+}
+echo clock::DAY_IN_SECONDS."</br>";
+echo clock::tomorrow()."</br>"//possible to use classname
+// $cl=new clock();
+// echo $cl->tomorrow();
+?>
