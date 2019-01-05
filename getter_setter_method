@@ -1,0 +1,19 @@
+<?php
+class mainclass
+{
+    private $name="sabeethaBalakrishnan";
+   /*operator overloading is funtion with different argument passing */
+   public function getfullname()
+   {
+      return $this->name;  
+   }
+   public function setfullname($value)
+   {
+     return $this->name=$value;
+   }
+}
+$mc=new mainclass();
+echo $mc->getfullname();
+echo "<br>";
+echo $mc->setfullname("Sabeetha");
+?>
