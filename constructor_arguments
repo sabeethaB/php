@@ -1,0 +1,16 @@
+<?php
+class product
+{
+    public $name;
+    public $price;
+    public $color;
+    public function __construct($args=[])
+    {
+        $this->name=$args['name'];
+        $this->price=$args['price'];
+        $this->color=$args['color'];
+    }
+}
+$shirt= new product(['name'=>'T-shirt','price'=>'99','color'=>'blue']);
+echo $shirt->color;
+?>
